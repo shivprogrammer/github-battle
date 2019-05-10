@@ -2,24 +2,28 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 
-function isLoading() {
-  return True
+function isAuthed() {
+  return true
+}
+
+function isNew() {
+  return true
 }
 
 class App extends React.Component {
   render() {
-    if (isLoading() === true) {
-      return null
-    }
+    const authed = isAuthed()
+    const newUser = isNew()
 
-    const name = 'Shiv'
-    return (
-      <div>
-        <h1>Hello, {name}</h1>
-        <p>Today is {new Date().toLocaleString()}</p>
-        <p>What is 2 + 2? {2 + 2}</p>
-      </div>
-    )
+    if (newUser === true) {
+      return <h1>Welcome for your first time!</h1>
+    }
+    else if (authed === true) {
+      return <h1>Welcome back!</h1>
+    }
+    else {
+      return <h1>Login to see your dashboard</h1>
+    }
   }
 }
 
