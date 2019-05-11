@@ -59,8 +59,9 @@ window binding
 // jim.mother.sayName()
 
 // EXPLICIT BINDING //
-var sayName = function() {
-  console.log('My name is ' + this.name)
+// call, apply, bind
+var sayName = function(lang1, lang2, lang3) {
+  console.log('My name is ' + this.name + ' and I know ' + lang1 + ', ' + lang2 + ', and ' + lang3)
 }
 var stacy = {
   name: 'Stacy',
@@ -69,4 +70,6 @@ var stacy = {
 
 var languages = ['JavaScript', 'Ruby', 'Python']
 
-sayName.call(stacy)
+var newFn = sayName.bind(stacy, languages[0], languages[1], languages[2])
+console.log('HERE')
+newFn()
