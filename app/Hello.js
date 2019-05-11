@@ -6,15 +6,10 @@ class Hello extends React.Component {
     console.log(this.props)
     return (
       <h2>
-        Hello, Shiv
+        Hello, {this.props.first} {this.props.last}
       </h2>
     )
   }
 }
 
-// export default Hello
-
-ReactDOM.render(
-  <Hello />,
-  document.getElementById('hello')
-)
+export default Hello
