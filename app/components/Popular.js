@@ -8,7 +8,7 @@ export default class Popular extends React.Component {
       selectedLanguage: 'All'
     }
 
-    this.selectedLanguage = this.selectedLanguage.bind(this)
+    this.updateLanguage = this.updateLanguage.bind(this)
   }
 
   updateLanguage(selectedLanguage) {
@@ -26,6 +26,7 @@ export default class Popular extends React.Component {
           <li key={language}>
             <button
               className="btn-clear nav-link"
+              style={language === this.state.selectedLanguage ? { color: 'rgb(187, 46, 31)' } : null}
               onClick={() => this.updateLanguage(language)}>
               {language}
             </button>
