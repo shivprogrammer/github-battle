@@ -8,11 +8,9 @@ class App extends React.Component {
     const name = 'Shiv'
 
     return (
-      <React.Fragment>
-        <h1>Hello, {name}</h1>
-        <p>Today is {new Date().toLocaleString()}</p>
-        <p>What is 2 * 2? {2 * 2}</p>
-      </React.Fragment>
+      <h2>
+        
+      </h2>
     )
   }
 }
