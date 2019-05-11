@@ -3,8 +3,13 @@ import Hello from './Hello'
 
 class App extends React.Component {
   render() {
-    return <Hello name>
+    return <Hello name='Shiv' />
   }
 }
 
-export default App
+// export default App
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('app')
+)

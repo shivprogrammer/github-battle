@@ -9,13 +9,13 @@ class App extends React.Component {
 
     return (
       <h2>
-        
+
       </h2>
     )
   }
 }
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('app')
-)
+// ReactDOM.render(
+//   <App />,
+//   document.getElementById('app')
+// )
