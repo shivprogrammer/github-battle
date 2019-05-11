@@ -6,8 +6,10 @@ class App extends React.Component {
   render() {
     return (
       <Hello
-        first='Shivvy'
-        last='Smalls'
+        username='shivvysmalls'
+        authed={true}
+        logout={() => alert('Logged Out!')}
+        header={<h1>Hi there!</h1>}
       />
     )
   }
