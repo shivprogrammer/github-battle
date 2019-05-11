@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
+import Popular from './components/Popular'
 
 
 class App extends React.Component {
@@ -8,9 +9,9 @@ class App extends React.Component {
     const name = 'Shiv'
 
     return (
-      <h2>
-        Hello, World!
-      </h2>
+      <div className='container'>
+        <Popular />
+      </div>
     )
   }
 }
